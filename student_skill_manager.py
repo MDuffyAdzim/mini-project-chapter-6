@@ -65,7 +65,7 @@ demand_skill = [
 
 # Integrasi program menjadi satu sistem yang bisa di akses bersamaan.
 
-while True:
+while True: 
     print("\n" + "=" * 48)
     print("🎓        STUDENT SKILL MANAGER        🎓")
     print("=" * 48)
@@ -79,8 +79,8 @@ while True:
     print("💡 Tip: Enter a number between 1 and 5.")
 
     # Input angka oleh user.
-    # Di back up oleh function try and except agar kita bisa mencegah error-nya program karena user yang meng-inputkan data yang salah.
-    # Yaitu tipe data selain integer.
+    # Menggunakan try-except untuk menangani ValueError
+    # ketika user memasukkan input yang bukan integer.
 
     try:
         user_input_integer = int(input("👉 Enter your choice (1-5): "))
@@ -128,7 +128,7 @@ while True:
         if npm_student not in students:
             print(f"{npm_not_found}")
             continue
-        check_skills = input("Enter skill to check: ")
+        check_skills = input("Enter skill to check: ").title()
         print("\n")
         print("========== CHECK STUDENT SKILLS ==========")
         print("\n")
